@@ -1,0 +1,32 @@
+# =====================================================================
+# GITIGNORE FOR PRICING AGENT MVP
+# =====================================================================
+
+# 1. Python virtual environments (contains compiled binaries)
+venv/
+env/
+.venv/
+ENV/
+
+# 2. Raw heavy datasets (90MB raw retail CSV - keep out of GitHub)
+data/*.csv
+data/*.xlsx
+data/*.gz
+data/*.zip
+
+# 3. IDE & editor configuration folders
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 4. Python bytecode & cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# 5. OS-generated files
+.DS_Store
+Thumbs.db

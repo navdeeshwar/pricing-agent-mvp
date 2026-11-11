@@ -1,0 +1,902 @@
+{
+  "15036": {
+    "stock_code": "15036",
+    "description": "ASSORTED COLOURS SILK FAN",
+    "base_price": 0.86,
+    "estimated_cost": 0.52,
+    "min_observed_price": 0.63,
+    "max_observed_price": 1.63,
+    "historical_mean_weekly_qty": 157.8
+  },
+  "20712": {
+    "stock_code": "20712",
+    "description": "JUMBO BAG WOODLAND ANIMALS",
+    "base_price": 2.16,
+    "estimated_cost": 1.3,
+    "min_observed_price": 1.73,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 153.7
+  },
+  "20713": {
+    "stock_code": "20713",
+    "description": "JUMBO BAG OWLS",
+    "base_price": 2.04,
+    "estimated_cost": 1.23,
+    "min_observed_price": 1.7,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 158.7
+  },
+  "20719": {
+    "stock_code": "20719",
+    "description": "WOODLAND CHARLOTTE BAG",
+    "base_price": 1.11,
+    "estimated_cost": 0.67,
+    "min_observed_price": 0.75,
+    "max_observed_price": 2.12,
+    "historical_mean_weekly_qty": 211.0
+  },
+  "20723": {
+    "stock_code": "20723",
+    "description": "STRAWBERRY CHARLOTTE BAG",
+    "base_price": 0.99,
+    "estimated_cost": 0.6,
+    "min_observed_price": 0.77,
+    "max_observed_price": 2.31,
+    "historical_mean_weekly_qty": 167.0
+  },
+  "20724": {
+    "stock_code": "20724",
+    "description": "RED SPOTTY CHARLOTTE BAG",
+    "base_price": 1.04,
+    "estimated_cost": 0.62,
+    "min_observed_price": 0.75,
+    "max_observed_price": 1.96,
+    "historical_mean_weekly_qty": 270.7
+  },
+  "20725": {
+    "stock_code": "20725",
+    "description": "LUNCH BAG RED SPOTTY",
+    "base_price": 1.7,
+    "estimated_cost": 1.02,
+    "min_observed_price": 1.52,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 368.5
+  },
+  "20726": {
+    "stock_code": "20726",
+    "description": "LUNCH BAG WOODLAND",
+    "base_price": 1.76,
+    "estimated_cost": 1.06,
+    "min_observed_price": 1.53,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 179.5
+  },
+  "20727": {
+    "stock_code": "20727",
+    "description": "LUNCH BAG  BLACK SKULL.",
+    "base_price": 1.72,
+    "estimated_cost": 1.03,
+    "min_observed_price": 1.5,
+    "max_observed_price": 4.95,
+    "historical_mean_weekly_qty": 226.7
+  },
+  "20728": {
+    "stock_code": "20728",
+    "description": "LUNCH BAG CARS BLUE",
+    "base_price": 1.76,
+    "estimated_cost": 1.05,
+    "min_observed_price": 1.5,
+    "max_observed_price": 3.32,
+    "historical_mean_weekly_qty": 201.5
+  },
+  "20914": {
+    "stock_code": "20914",
+    "description": "SET/5 RED SPOTTY LID GLASS BOWLS",
+    "base_price": 2.9,
+    "estimated_cost": 1.74,
+    "min_observed_price": 2.63,
+    "max_observed_price": 3.68,
+    "historical_mean_weekly_qty": 147.5
+  },
+  "20972": {
+    "stock_code": "20972",
+    "description": "PINK CREAM FELT CRAFT TRINKET BOX ",
+    "base_price": 1.27,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.15,
+    "max_observed_price": 2.51,
+    "historical_mean_weekly_qty": 135.1
+  },
+  "20975": {
+    "stock_code": "20975",
+    "description": "12 PENCILS SMALL TUBE RED SPOTTY",
+    "base_price": 0.66,
+    "estimated_cost": 0.4,
+    "min_observed_price": 0.61,
+    "max_observed_price": 1.3,
+    "historical_mean_weekly_qty": 146.3
+  },
+  "21080": {
+    "stock_code": "21080",
+    "description": "SET/20 RED SPOTTY PAPER NAPKINS ",
+    "base_price": 0.86,
+    "estimated_cost": 0.52,
+    "min_observed_price": 0.64,
+    "max_observed_price": 1.59,
+    "historical_mean_weekly_qty": 264.4
+  },
+  "21094": {
+    "stock_code": "21094",
+    "description": "SET/6 RED SPOTTY PAPER PLATES",
+    "base_price": 0.85,
+    "estimated_cost": 0.51,
+    "min_observed_price": 0.71,
+    "max_observed_price": 1.45,
+    "historical_mean_weekly_qty": 151.6
+  },
+  "21166": {
+    "stock_code": "21166",
+    "description": "COOK WITH WINE METAL SIGN ",
+    "base_price": 1.96,
+    "estimated_cost": 1.17,
+    "min_observed_price": 1.61,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 133.2
+  },
+  "21175": {
+    "stock_code": "21175",
+    "description": "GIN + TONIC DIET METAL SIGN",
+    "base_price": 2.27,
+    "estimated_cost": 1.36,
+    "min_observed_price": 1.8,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 145.4
+  },
+  "21181": {
+    "stock_code": "21181",
+    "description": "PLEASE ONE PERSON  METAL SIGN",
+    "base_price": 2.08,
+    "estimated_cost": 1.25,
+    "min_observed_price": 1.83,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 243.9
+  },
+  "21212": {
+    "stock_code": "21212",
+    "description": "PACK OF 72 RETRO SPOT CAKE CASES",
+    "base_price": 0.62,
+    "estimated_cost": 0.37,
+    "min_observed_price": 0.53,
+    "max_observed_price": 1.19,
+    "historical_mean_weekly_qty": 462.0
+  },
+  "21213": {
+    "stock_code": "21213",
+    "description": "PACK OF 72 SKULL CAKE CASES",
+    "base_price": 0.61,
+    "estimated_cost": 0.37,
+    "min_observed_price": 0.55,
+    "max_observed_price": 1.17,
+    "historical_mean_weekly_qty": 181.9
+  },
+  "21231": {
+    "stock_code": "21231",
+    "description": "SWEETHEART CERAMIC TRINKET BOX",
+    "base_price": 1.26,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.08,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 186.0
+  },
+  "21232": {
+    "stock_code": "21232",
+    "description": "STRAWBERRY CERAMIC TRINKET BOX",
+    "base_price": 1.31,
+    "estimated_cost": 0.79,
+    "min_observed_price": 1.1,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 306.0
+  },
+  "21497": {
+    "stock_code": "21497",
+    "description": "FANCY FONTS BIRTHDAY WRAP",
+    "base_price": 0.42,
+    "estimated_cost": 0.25,
+    "min_observed_price": 0.4,
+    "max_observed_price": 0.42,
+    "historical_mean_weekly_qty": 127.3
+  },
+  "21498": {
+    "stock_code": "21498",
+    "description": "RED SPOTS  WRAP ",
+    "base_price": 0.42,
+    "estimated_cost": 0.25,
+    "min_observed_price": 0.39,
+    "max_observed_price": 0.42,
+    "historical_mean_weekly_qty": 214.4
+  },
+  "21500": {
+    "stock_code": "21500",
+    "description": "PINK SPOTS  WRAP ",
+    "base_price": 0.42,
+    "estimated_cost": 0.25,
+    "min_observed_price": 0.37,
+    "max_observed_price": 0.42,
+    "historical_mean_weekly_qty": 136.5
+  },
+  "21731": {
+    "stock_code": "21731",
+    "description": "RED TOADSTOOL LED NIGHT LIGHT",
+    "base_price": 1.84,
+    "estimated_cost": 1.11,
+    "min_observed_price": 1.65,
+    "max_observed_price": 3.43,
+    "historical_mean_weekly_qty": 154.5
+  },
+  "21733": {
+    "stock_code": "21733",
+    "description": "RED HANGING HEART T-LIGHT HOLDER",
+    "base_price": 2.84,
+    "estimated_cost": 1.7,
+    "min_observed_price": 2.61,
+    "max_observed_price": 3.45,
+    "historical_mean_weekly_qty": 139.0
+  },
+  "21790": {
+    "stock_code": "21790",
+    "description": "VINTAGE SNAP CARDS",
+    "base_price": 0.87,
+    "estimated_cost": 0.52,
+    "min_observed_price": 0.78,
+    "max_observed_price": 1.65,
+    "historical_mean_weekly_qty": 198.8
+  },
+  "21791": {
+    "stock_code": "21791",
+    "description": "VINTAGE HEADS AND TAILS CARD GAME ",
+    "base_price": 1.28,
+    "estimated_cost": 0.77,
+    "min_observed_price": 1.13,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 122.9
+  },
+  "21829": {
+    "stock_code": "21829",
+    "description": "DINOSAUR KEYRINGS ASSORTED",
+    "base_price": 0.21,
+    "estimated_cost": 0.13,
+    "min_observed_price": 0.2,
+    "max_observed_price": 0.43,
+    "historical_mean_weekly_qty": 132.6
+  },
+  "21915": {
+    "stock_code": "21915",
+    "description": "RED  HARMONICA IN BOX ",
+    "base_price": 1.26,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.13,
+    "max_observed_price": 1.89,
+    "historical_mean_weekly_qty": 139.8
+  },
+  "21928": {
+    "stock_code": "21928",
+    "description": "JUMBO BAG SCANDINAVIAN PAISLEY",
+    "base_price": 1.99,
+    "estimated_cost": 1.2,
+    "min_observed_price": 1.69,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 188.2
+  },
+  "21929": {
+    "stock_code": "21929",
+    "description": "JUMBO BAG PINK VINTAGE PAISLEY",
+    "base_price": 2.02,
+    "estimated_cost": 1.21,
+    "min_observed_price": 1.65,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 201.6
+  },
+  "21930": {
+    "stock_code": "21930",
+    "description": "JUMBO STORAGE BAG SKULLS",
+    "base_price": 2.04,
+    "estimated_cost": 1.23,
+    "min_observed_price": 1.65,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 126.3
+  },
+  "21931": {
+    "stock_code": "21931",
+    "description": "JUMBO STORAGE BAG SUKI",
+    "base_price": 2.03,
+    "estimated_cost": 1.22,
+    "min_observed_price": 1.66,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 262.1
+  },
+  "21975": {
+    "stock_code": "21975",
+    "description": "PACK OF 60 DINOSAUR CAKE CASES",
+    "base_price": 0.56,
+    "estimated_cost": 0.33,
+    "min_observed_price": 0.54,
+    "max_observed_price": 0.69,
+    "historical_mean_weekly_qty": 151.1
+  },
+  "21977": {
+    "stock_code": "21977",
+    "description": "PACK OF 60 PINK PAISLEY CAKE CASES",
+    "base_price": 0.57,
+    "estimated_cost": 0.34,
+    "min_observed_price": 0.55,
+    "max_observed_price": 0.93,
+    "historical_mean_weekly_qty": 257.6
+  },
+  "21980": {
+    "stock_code": "21980",
+    "description": "PACK OF 12 RED SPOTTY TISSUES ",
+    "base_price": 0.3,
+    "estimated_cost": 0.18,
+    "min_observed_price": 0.27,
+    "max_observed_price": 0.83,
+    "historical_mean_weekly_qty": 135.3
+  },
+  "21985": {
+    "stock_code": "21985",
+    "description": "PACK OF 12 HEARTS DESIGN TISSUES ",
+    "base_price": 0.31,
+    "estimated_cost": 0.18,
+    "min_observed_price": 0.28,
+    "max_observed_price": 0.83,
+    "historical_mean_weekly_qty": 146.9
+  },
+  "22029": {
+    "stock_code": "22029",
+    "description": "SPACE BOY BIRTHDAY CARD",
+    "base_price": 0.43,
+    "estimated_cost": 0.26,
+    "min_observed_price": 0.38,
+    "max_observed_price": 0.85,
+    "historical_mean_weekly_qty": 138.6
+  },
+  "22045": {
+    "stock_code": "22045",
+    "description": "SPACE BOY GIFT WRAP",
+    "base_price": 0.42,
+    "estimated_cost": 0.25,
+    "min_observed_price": 0.34,
+    "max_observed_price": 0.42,
+    "historical_mean_weekly_qty": 132.3
+  },
+  "22077": {
+    "stock_code": "22077",
+    "description": "6 RIBBONS RUSTIC CHARM",
+    "base_price": 1.76,
+    "estimated_cost": 1.06,
+    "min_observed_price": 1.65,
+    "max_observed_price": 3.43,
+    "historical_mean_weekly_qty": 159.2
+  },
+  "22086": {
+    "stock_code": "22086",
+    "description": "PAPER CHAIN KIT 50'S CHRISTMAS ",
+    "base_price": 3.12,
+    "estimated_cost": 1.87,
+    "min_observed_price": 2.58,
+    "max_observed_price": 6.77,
+    "historical_mean_weekly_qty": 295.0
+  },
+  "22090": {
+    "stock_code": "22090",
+    "description": "PAPER BUNTING RETRO SPOTS",
+    "base_price": 3.07,
+    "estimated_cost": 1.84,
+    "min_observed_price": 2.63,
+    "max_observed_price": 6.04,
+    "historical_mean_weekly_qty": 132.6
+  },
+  "22151": {
+    "stock_code": "22151",
+    "description": "PLACE SETTING WHITE HEART",
+    "base_price": 0.42,
+    "estimated_cost": 0.25,
+    "min_observed_price": 0.42,
+    "max_observed_price": 1.7,
+    "historical_mean_weekly_qty": 160.2
+  },
+  "22178": {
+    "stock_code": "22178",
+    "description": "VICTORIAN GLASS HANGING T-LIGHT",
+    "base_price": 1.31,
+    "estimated_cost": 0.79,
+    "min_observed_price": 1.14,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 303.3
+  },
+  "22197": {
+    "stock_code": "22197",
+    "description": "POPCORN HOLDER , SMALL ",
+    "base_price": 0.88,
+    "estimated_cost": 0.53,
+    "min_observed_price": 0.74,
+    "max_observed_price": 1.41,
+    "historical_mean_weekly_qty": 397.3
+  },
+  "22294": {
+    "stock_code": "22294",
+    "description": "HEART FILIGREE DOVE  SMALL",
+    "base_price": 1.27,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.16,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 133.1
+  },
+  "22355": {
+    "stock_code": "22355",
+    "description": "CHARLOTTE BAG , SUKI DESIGN",
+    "base_price": 0.96,
+    "estimated_cost": 0.58,
+    "min_observed_price": 0.75,
+    "max_observed_price": 2.21,
+    "historical_mean_weekly_qty": 239.6
+  },
+  "22356": {
+    "stock_code": "22356",
+    "description": "CHARLOTTE BAG , PINK/WHITE SPOTS",
+    "base_price": 1.06,
+    "estimated_cost": 0.63,
+    "min_observed_price": 0.8,
+    "max_observed_price": 2.27,
+    "historical_mean_weekly_qty": 175.4
+  },
+  "22382": {
+    "stock_code": "22382",
+    "description": "LUNCHBAG SPACEBOY DESIGN ",
+    "base_price": 1.68,
+    "estimated_cost": 1.01,
+    "min_observed_price": 1.52,
+    "max_observed_price": 2.54,
+    "historical_mean_weekly_qty": 197.5
+  },
+  "22383": {
+    "stock_code": "22383",
+    "description": "LUNCHBAG SUKI  DESIGN ",
+    "base_price": 1.72,
+    "estimated_cost": 1.03,
+    "min_observed_price": 1.53,
+    "max_observed_price": 2.71,
+    "historical_mean_weekly_qty": 247.1
+  },
+  "22384": {
+    "stock_code": "22384",
+    "description": "LUNCHBAG PINK RETROSPOT",
+    "base_price": 1.68,
+    "estimated_cost": 1.01,
+    "min_observed_price": 1.52,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 209.1
+  },
+  "22385": {
+    "stock_code": "22385",
+    "description": "JUMBO BAG SPACEBOY DESIGN",
+    "base_price": 1.99,
+    "estimated_cost": 1.19,
+    "min_observed_price": 1.63,
+    "max_observed_price": 4.28,
+    "historical_mean_weekly_qty": 134.3
+  },
+  "22386": {
+    "stock_code": "22386",
+    "description": "JUMBO BAG PINK WITH WHITE SPOTS",
+    "base_price": 1.98,
+    "estimated_cost": 1.19,
+    "min_observed_price": 1.64,
+    "max_observed_price": 5.06,
+    "historical_mean_weekly_qty": 300.1
+  },
+  "22411": {
+    "stock_code": "22411",
+    "description": "JUMBO SHOPPER VINTAGE RED PAISLEY",
+    "base_price": 2.13,
+    "estimated_cost": 1.28,
+    "min_observed_price": 1.68,
+    "max_observed_price": 3.47,
+    "historical_mean_weekly_qty": 253.7
+  },
+  "22417": {
+    "stock_code": "22417",
+    "description": "PACK OF 60 SPACEBOY CAKE CASES",
+    "base_price": 0.57,
+    "estimated_cost": 0.34,
+    "min_observed_price": 0.55,
+    "max_observed_price": 1.06,
+    "historical_mean_weekly_qty": 131.6
+  },
+  "22423": {
+    "stock_code": "22423",
+    "description": "REGENCY CAKESTAND 3 TIER",
+    "base_price": 12.58,
+    "estimated_cost": 7.55,
+    "min_observed_price": 11.54,
+    "max_observed_price": 25.55,
+    "historical_mean_weekly_qty": 262.1
+  },
+  "22457": {
+    "stock_code": "22457",
+    "description": "NATURAL SLATE HEART CHALKBOARD ",
+    "base_price": 3.08,
+    "estimated_cost": 1.85,
+    "min_observed_price": 2.67,
+    "max_observed_price": 5.91,
+    "historical_mean_weekly_qty": 169.5
+  },
+  "22469": {
+    "stock_code": "22469",
+    "description": "HEART OF WICKER SMALL",
+    "base_price": 1.7,
+    "estimated_cost": 1.02,
+    "min_observed_price": 1.57,
+    "max_observed_price": 4.09,
+    "historical_mean_weekly_qty": 277.2
+  },
+  "22470": {
+    "stock_code": "22470",
+    "description": "HEART OF WICKER LARGE",
+    "base_price": 2.97,
+    "estimated_cost": 1.78,
+    "min_observed_price": 2.5,
+    "max_observed_price": 4.22,
+    "historical_mean_weekly_qty": 165.9
+  },
+  "22492": {
+    "stock_code": "22492",
+    "description": "MINI PAINT SET VINTAGE ",
+    "base_price": 0.65,
+    "estimated_cost": 0.39,
+    "min_observed_price": 0.61,
+    "max_observed_price": 0.81,
+    "historical_mean_weekly_qty": 286.1
+  },
+  "22551": {
+    "stock_code": "22551",
+    "description": "PLASTERS IN TIN SPACEBOY",
+    "base_price": 1.65,
+    "estimated_cost": 0.99,
+    "min_observed_price": 1.49,
+    "max_observed_price": 2.49,
+    "historical_mean_weekly_qty": 152.9
+  },
+  "22558": {
+    "stock_code": "22558",
+    "description": "CLOTHES PEGS RETROSPOT PACK 24 ",
+    "base_price": 1.53,
+    "estimated_cost": 0.92,
+    "min_observed_price": 1.09,
+    "max_observed_price": 2.11,
+    "historical_mean_weekly_qty": 191.0
+  },
+  "22577": {
+    "stock_code": "22577",
+    "description": "WOODEN HEART CHRISTMAS SCANDINAVIAN",
+    "base_price": 0.85,
+    "estimated_cost": 0.51,
+    "min_observed_price": 0.31,
+    "max_observed_price": 1.66,
+    "historical_mean_weekly_qty": 208.7
+  },
+  "22616": {
+    "stock_code": "22616",
+    "description": "PACK OF 12 LONDON TISSUES ",
+    "base_price": 0.31,
+    "estimated_cost": 0.18,
+    "min_observed_price": 0.29,
+    "max_observed_price": 0.83,
+    "historical_mean_weekly_qty": 164.6
+  },
+  "22629": {
+    "stock_code": "22629",
+    "description": "SPACEBOY LUNCH BOX ",
+    "base_price": 1.95,
+    "estimated_cost": 1.17,
+    "min_observed_price": 1.68,
+    "max_observed_price": 2.51,
+    "historical_mean_weekly_qty": 180.6
+  },
+  "22865": {
+    "stock_code": "22865",
+    "description": "HAND WARMER OWL DESIGN",
+    "base_price": 2.1,
+    "estimated_cost": 1.26,
+    "min_observed_price": 1.94,
+    "max_observed_price": 4.13,
+    "historical_mean_weekly_qty": 296.5
+  },
+  "22867": {
+    "stock_code": "22867",
+    "description": "HAND WARMER BIRD DESIGN",
+    "base_price": 2.13,
+    "estimated_cost": 1.28,
+    "min_observed_price": 1.93,
+    "max_observed_price": 4.21,
+    "historical_mean_weekly_qty": 304.7
+  },
+  "22909": {
+    "stock_code": "22909",
+    "description": "SET OF 20 VINTAGE CHRISTMAS NAPKINS",
+    "base_price": 0.88,
+    "estimated_cost": 0.53,
+    "min_observed_price": 0.77,
+    "max_observed_price": 1.63,
+    "historical_mean_weekly_qty": 261.9
+  },
+  "22910": {
+    "stock_code": "22910",
+    "description": "PAPER CHAIN KIT VINTAGE CHRISTMAS",
+    "base_price": 2.95,
+    "estimated_cost": 1.77,
+    "min_observed_price": 2.55,
+    "max_observed_price": 6.63,
+    "historical_mean_weekly_qty": 315.4
+  },
+  "22952": {
+    "stock_code": "22952",
+    "description": "72 CAKE CASES VINTAGE CHRISTMAS",
+    "base_price": 0.6,
+    "estimated_cost": 0.36,
+    "min_observed_price": 0.55,
+    "max_observed_price": 1.28,
+    "historical_mean_weekly_qty": 372.2
+  },
+  "22961": {
+    "stock_code": "22961",
+    "description": "JAM MAKING SET PRINTED",
+    "base_price": 1.52,
+    "estimated_cost": 0.91,
+    "min_observed_price": 1.33,
+    "max_observed_price": 2.54,
+    "historical_mean_weekly_qty": 274.5
+  },
+  "23084": {
+    "stock_code": "23084",
+    "description": "RABBIT NIGHT LIGHT",
+    "base_price": 2.38,
+    "estimated_cost": 1.43,
+    "min_observed_price": 1.85,
+    "max_observed_price": 4.13,
+    "historical_mean_weekly_qty": 486.0
+  },
+  "23203": {
+    "stock_code": "23203",
+    "description": "JUMBO BAG DOILEY PATTERNS",
+    "base_price": 2.04,
+    "estimated_cost": 1.22,
+    "min_observed_price": 1.85,
+    "max_observed_price": 2.19,
+    "historical_mean_weekly_qty": 485.2
+  },
+  "23209": {
+    "stock_code": "23209",
+    "description": "LUNCH BAG DOILEY PATTERN ",
+    "base_price": 1.65,
+    "estimated_cost": 0.99,
+    "min_observed_price": 1.54,
+    "max_observed_price": 1.82,
+    "historical_mean_weekly_qty": 399.7
+  },
+  "47566": {
+    "stock_code": "47566",
+    "description": "PARTY BUNTING",
+    "base_price": 5.26,
+    "estimated_cost": 3.15,
+    "min_observed_price": 3.94,
+    "max_observed_price": 9.1,
+    "historical_mean_weekly_qty": 244.6
+  },
+  "71459": {
+    "stock_code": "71459",
+    "description": "HANGING JAM JAR T-LIGHT HOLDER",
+    "base_price": 0.85,
+    "estimated_cost": 0.51,
+    "min_observed_price": 0.73,
+    "max_observed_price": 1.69,
+    "historical_mean_weekly_qty": 223.9
+  },
+  "72741": {
+    "stock_code": "72741",
+    "description": "GRAND CHOCOLATECANDLE",
+    "base_price": 1.45,
+    "estimated_cost": 0.87,
+    "min_observed_price": 1.25,
+    "max_observed_price": 8.65,
+    "historical_mean_weekly_qty": 147.0
+  },
+  "79321": {
+    "stock_code": "79321",
+    "description": "CHILLI LIGHTS",
+    "base_price": 5.34,
+    "estimated_cost": 3.2,
+    "min_observed_price": 4.15,
+    "max_observed_price": 12.46,
+    "historical_mean_weekly_qty": 129.9
+  },
+  "82482": {
+    "stock_code": "82482",
+    "description": "WOODEN PICTURE FRAME WHITE FINISH",
+    "base_price": 2.55,
+    "estimated_cost": 1.53,
+    "min_observed_price": 2.21,
+    "max_observed_price": 3.34,
+    "historical_mean_weekly_qty": 157.8
+  },
+  "82494L": {
+    "stock_code": "82494L",
+    "description": "WOODEN FRAME ANTIQUE WHITE ",
+    "base_price": 2.88,
+    "estimated_cost": 1.73,
+    "min_observed_price": 2.68,
+    "max_observed_price": 3.85,
+    "historical_mean_weekly_qty": 156.9
+  },
+  "84077": {
+    "stock_code": "84077",
+    "description": "WORLD WAR 2 GLIDERS ASSTD DESIGNS",
+    "base_price": 0.29,
+    "estimated_cost": 0.17,
+    "min_observed_price": 0.21,
+    "max_observed_price": 0.35,
+    "historical_mean_weekly_qty": 428.0
+  },
+  "84270": {
+    "stock_code": "84270",
+    "description": "ASSTD DESIGN BUBBLE GUM RING",
+    "base_price": 0.21,
+    "estimated_cost": 0.13,
+    "min_observed_price": 0.19,
+    "max_observed_price": 0.43,
+    "historical_mean_weekly_qty": 307.3
+  },
+  "84692": {
+    "stock_code": "84692",
+    "description": "BOX OF 24 COCKTAIL PARASOLS",
+    "base_price": 0.47,
+    "estimated_cost": 0.28,
+    "min_observed_price": 0.39,
+    "max_observed_price": 1.57,
+    "historical_mean_weekly_qty": 159.5
+  },
+  "84755": {
+    "stock_code": "84755",
+    "description": "COLOUR GLASS T-LIGHT HOLDER HANGING",
+    "base_price": 0.67,
+    "estimated_cost": 0.4,
+    "min_observed_price": 0.63,
+    "max_observed_price": 5.17,
+    "historical_mean_weekly_qty": 202.6
+  },
+  "84836": {
+    "stock_code": "84836",
+    "description": "ZINC METAL HEART DECORATION",
+    "base_price": 1.26,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.21,
+    "max_observed_price": 1.69,
+    "historical_mean_weekly_qty": 149.4
+  },
+  "84879": {
+    "stock_code": "84879",
+    "description": "ASSORTED COLOUR BIRD ORNAMENT",
+    "base_price": 1.72,
+    "estimated_cost": 1.03,
+    "min_observed_price": 1.55,
+    "max_observed_price": 3.12,
+    "historical_mean_weekly_qty": 433.4
+  },
+  "84945": {
+    "stock_code": "84945",
+    "description": "MULTI COLOUR SILVER T-LIGHT HOLDER",
+    "base_price": 0.85,
+    "estimated_cost": 0.51,
+    "min_observed_price": 0.8,
+    "max_observed_price": 11.36,
+    "historical_mean_weekly_qty": 137.8
+  },
+  "84946": {
+    "stock_code": "84946",
+    "description": "ANTIQUE SILVER TEA GLASS ETCHED",
+    "base_price": 1.34,
+    "estimated_cost": 0.81,
+    "min_observed_price": 1.13,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 305.0
+  },
+  "84970L": {
+    "stock_code": "84970L",
+    "description": "SINGLE HEART ZINC T-LIGHT HOLDER",
+    "base_price": 1.01,
+    "estimated_cost": 0.61,
+    "min_observed_price": 0.85,
+    "max_observed_price": 2.17,
+    "historical_mean_weekly_qty": 123.0
+  },
+  "84970S": {
+    "stock_code": "84970S",
+    "description": "HANGING HEART ZINC T-LIGHT HOLDER",
+    "base_price": 0.9,
+    "estimated_cost": 0.54,
+    "min_observed_price": 0.84,
+    "max_observed_price": 2.17,
+    "historical_mean_weekly_qty": 169.8
+  },
+  "84978": {
+    "stock_code": "84978",
+    "description": "HANGING HEART JAR T-LIGHT HOLDER",
+    "base_price": 1.27,
+    "estimated_cost": 0.76,
+    "min_observed_price": 1.12,
+    "max_observed_price": 2.57,
+    "historical_mean_weekly_qty": 176.4
+  },
+  "84991": {
+    "stock_code": "84991",
+    "description": "60 TEATIME FAIRY CAKE CASES",
+    "base_price": 0.57,
+    "estimated_cost": 0.34,
+    "min_observed_price": 0.54,
+    "max_observed_price": 0.85,
+    "historical_mean_weekly_qty": 280.2
+  },
+  "84992": {
+    "stock_code": "84992",
+    "description": "72 SWEETHEART FAIRY CAKE CASES",
+    "base_price": 0.57,
+    "estimated_cost": 0.34,
+    "min_observed_price": 0.54,
+    "max_observed_price": 0.95,
+    "historical_mean_weekly_qty": 159.6
+  },
+  "85099B": {
+    "stock_code": "85099B",
+    "description": "JUMBO BAG RED WHITE SPOTTY ",
+    "base_price": 1.92,
+    "estimated_cost": 1.15,
+    "min_observed_price": 1.72,
+    "max_observed_price": 2.72,
+    "historical_mean_weekly_qty": 628.4
+  },
+  "85099C": {
+    "stock_code": "85099C",
+    "description": "JUMBO  BAG BAROQUE BLACK WHITE",
+    "base_price": 2.0,
+    "estimated_cost": 1.2,
+    "min_observed_price": 1.69,
+    "max_observed_price": 2.95,
+    "historical_mean_weekly_qty": 230.7
+  },
+  "85099F": {
+    "stock_code": "85099F",
+    "description": "JUMBO BAG STRAWBERRY",
+    "base_price": 1.91,
+    "estimated_cost": 1.15,
+    "min_observed_price": 1.73,
+    "max_observed_price": 4.21,
+    "historical_mean_weekly_qty": 245.6
+  },
+  "85123A": {
+    "stock_code": "85123A",
+    "description": "WHITE HANGING HEART T-LIGHT HOLDER",
+    "base_price": 2.77,
+    "estimated_cost": 1.66,
+    "min_observed_price": 2.6,
+    "max_observed_price": 4.5,
+    "historical_mean_weekly_qty": 638.2
+  },
+  "85152": {
+    "stock_code": "85152",
+    "description": "HAND OVER THE CHOCOLATE   SIGN ",
+    "base_price": 2.08,
+    "estimated_cost": 1.25,
+    "min_observed_price": 1.54,
+    "max_observed_price": 4.3,
+    "historical_mean_weekly_qty": 128.9
+  }
+}

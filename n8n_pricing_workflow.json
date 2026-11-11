@@ -1,0 +1,222 @@
+{
+  "name": "Autonomous Pricing Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        380,
+        240
+      ],
+      "id": "chat-trigger-1",
+      "name": "When chat message received"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=You are an expert Autonomous Pricing Strategist & Analyst. You have direct access to an underlying retail pricing engine with LightGBM demand models and business guardrails.\n\nWhen a user asks about pricing, follow these rules:\n1. If they ask about a product by name or keyword (e.g. \"silk fan\"), use the \"search_products\" tool to find its StockCode, current baseline price, and unit cost.\n2. If they ask to optimize or recommend a price for a product, use the \"recommend_price\" tool (specifying objective as \"max_profit\" or \"max_revenue\").\n3. If they propose a specific price or ask a \"what-if\" question, use the \"simulate_price\" tool to test projected demand, profit, and check if any guardrails are violated.\n4. Always summarize the recommendation clearly: highlight the recommended price, percentage change, projected demand, profit lift, and explain any guardrails that were enforced."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        600,
+        240
+      ],
+      "id": "agent-1",
+      "name": "AI Pricing Agent"
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "options": {
+          "temperature": 0.2
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        500,
+        460
+      ],
+      "id": "model-1",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        660,
+        460
+      ],
+      "id": "memory-1",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "name": "recommend_price",
+        "description": "Calculates the mathematically optimal price for a product to maximize gross profit or revenue subject to business guardrails.",
+        "method": "GET",
+        "url": "http://host.docker.internal:8000/pricing/recommend",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "stock_code",
+              "value": "={{ $fromAI('stock_code', 'Product StockCode, e.g. 15036', 'string') }}"
+            },
+            {
+              "name": "objective",
+              "value": "={{ $fromAI('objective', 'Optimization objective: max_profit or max_revenue', 'string', 'max_profit') }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        820,
+        460
+      ],
+      "id": "tool-recommend",
+      "name": "recommend_price"
+    },
+    {
+      "parameters": {
+        "name": "simulate_price",
+        "description": "Simulates a hypothetical price scenario. Returns projected weekly demand, revenue, profit, gross margin, and audits whether it violates margin floors or velocity guardrails.",
+        "method": "GET",
+        "url": "http://host.docker.internal:8000/pricing/simulate",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "stock_code",
+              "value": "={{ $fromAI('stock_code', 'Product StockCode, e.g. 15036', 'string') }}"
+            },
+            {
+              "name": "proposed_price",
+              "value": "={{ $fromAI('proposed_price', 'The numeric price to test, e.g. 0.50', 'string') }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        980,
+        460
+      ],
+      "id": "tool-simulate",
+      "name": "simulate_price"
+    },
+    {
+      "parameters": {
+        "name": "search_products",
+        "description": "Search for products in the catalog to look up StockCodes, product descriptions, baseline prices, and unit costs.",
+        "method": "GET",
+        "url": "http://host.docker.internal:8000/products",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "search",
+              "value": "={{ $fromAI('search', 'Product name or code search keyword', 'string', '') }}"
+            },
+            {
+              "name": "limit",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1140,
+        460
+      ],
+      "id": "tool-search",
+      "name": "search_products"
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "recommend_price": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "simulate_price": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "search_products": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Pricing Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

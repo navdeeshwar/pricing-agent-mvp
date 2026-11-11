@@ -1,0 +1,9 @@
+[
+  "StockCode",
+  "price",
+  "ref_price",
+  "price_ratio",
+  "month",
+  "week_of_year",
+  "quarter"
+]
