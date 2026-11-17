@@ -238,7 +238,8 @@ class PricingOptimizer:
                 "min_margin_pct": self.guardrails.min_margin_pct * 100,
                 "max_price_velocity_pct": self.guardrails.max_price_change_pct * 100,
                 "allowed_price_corridor": [p_min, p_max]
-            }
+            },
+            "curve": curve
         }
 
 

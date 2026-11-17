@@ -7,6 +7,20 @@ services:
     restart: unless-stopped
     ports:
       - "8000:8000"
+    volumes:
+      - ./models:/app/models
+
+  pricing-ui:
+    build: .
+    container_name: pricing-ui
+    restart: unless-stopped
+    command: ["streamlit", "run", "src/4_dashboard.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://pricing-api:8000
+    depends_on:
+      - pricing-api
 
   n8n:
     image: docker.n8n.io/n8nio/n8n:latest

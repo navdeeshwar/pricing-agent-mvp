@@ -17,9 +17,12 @@ WHAT THIS SCRIPT DOES:
 ===================================================================================
 """
 
+import csv
+import json
 import os
 import re
 import sys
+from datetime import datetime, timezone
 from typing import Optional, Literal, Any
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -69,6 +72,8 @@ app.add_middleware(
 # If we re-loaded the model on every single user question, each reply would take 2-5 seconds.
 # Keeping it in RAM means predictions happen in under 10 milliseconds!
 optimizer = PricingOptimizer()
+AUDIT_LOG_PATH = os.path.join(optimizer.models_dir, "price_audit_log.csv")
+CATALOG_PATH = os.path.join(optimizer.models_dir, "product_catalog.json")
 
 
 # ---------------------------------------------------------------------------------
@@ -124,6 +129,27 @@ class SimulateRequest(BaseModel):
         Strips away currency symbols (£, $, €), commas, and spaces using regex.
         Turns '£0.50' or '$ 1.25' into clean floats (0.50, 1.25) so math calculations don't crash.
         """
+        if isinstance(v, (int, float)):
+            return float(v)
+        cleaned = re.sub(r"[^\d.]", "", str(v))
+        if not cleaned:
+            raise ValueError(f"Could not parse numeric price from '{v}'")
+        return float(cleaned)
+
+
+class ApproveRequest(BaseModel):
+    """Schema for approving a price change with tiered autonomy and audit logging."""
+    stock_code: str = Field(..., example="15036")
+    approved_price: float = Field(..., gt=0)
+    approver: str = Field("Category Manager", description="Person or system approving the price")
+    reason: Optional[str] = Field("Approved via pricing recommendation", description="Justification")
+
+    @field_validator("stock_code", mode="before")
+    def clean_stock_code(cls, v: Any) -> str:
+        return str(v).strip()
+
+    @field_validator("approved_price", mode="before")
+    def clean_price(cls, v: Any) -> float:
         if isinstance(v, (int, float)):
             return float(v)
         cleaned = re.sub(r"[^\d.]", "", str(v))
@@ -324,6 +350,101 @@ def agent_query(req: AgentQueryRequest):
         f"- Guardrails Enforced: Corridor [£{rec['guardrails_applied']['allowed_price_corridor'][0]:.2f}, £{rec['guardrails_applied']['allowed_price_corridor'][1]:.2f}] with 15% margin floor."
     )
     return {"query": query, "type": "recommendation", "result": rec, "narrative": narrative}
+
+
+@app.get("/pricing/portfolio")
+def portfolio_opportunities(limit: int = 10, objective: str = "max_profit"):
+    """
+    Scans all SKUs in the catalog and ranks them by projected weekly profit/revenue lift.
+    Powers the Merchant Opportunity Queue in the UI.
+    """
+    norm_obj = "max_revenue" if "rev" in objective.lower() else "max_profit"
+    opportunities = []
+    for code in optimizer.catalog.keys():
+        res = optimizer.optimize_price(code, objective=norm_obj)
+        base = res["baseline"]
+        rec = res["recommendation"]
+        opportunities.append({
+            "stock_code": code,
+            "description": res["description"],
+            "base_price": base["price"],
+            "recommended_price": rec["recommended_price"],
+            "price_change_pct": rec["price_change_pct"],
+            "baseline_profit": base["projected_profit"],
+            "projected_profit": rec["projected_profit"],
+            "profit_lift_gbp": round(rec["projected_profit"] - base["projected_profit"], 2),
+            "profit_lift_pct": rec["profit_lift_pct"],
+            "autonomy_tier": "AUTO_APPROVE (<=3%)" if abs(rec["price_change_pct"]) <= 3.0 else "MANAGER_REVIEW (>3%)"
+        })
+
+    opportunities.sort(key=lambda x: x["profit_lift_gbp"], reverse=True)
+    return {"count": min(limit, len(opportunities)), "opportunities": opportunities[:limit]}
+
+
+@app.post("/pricing/approve")
+def approve_price(req: ApproveRequest):
+    """
+    Enforces tiered autonomy + guardrail checks, updates the active catalog price,
+    and writes an immutable audit row to models/price_audit_log.csv.
+    """
+    if req.stock_code not in optimizer.catalog:
+        raise HTTPException(status_code=404, detail=f"StockCode '{req.stock_code}' not found in catalog.")
+
+    item = optimizer.catalog[req.stock_code]
+    old_price = item["base_price"]
+    cost = item["estimated_cost"]
+
+    p_min, p_max = optimizer.guardrails.compute_feasible_price_range(
+        base_price=old_price,
+        unit_cost=cost,
+        min_hist_price=item["min_observed_price"],
+        max_hist_price=item["max_observed_price"]
+    )
+
+    if req.approved_price < p_min or req.approved_price > p_max:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Guardrail Block: £{req.approved_price:.2f} is outside the safe corridor [£{p_min:.2f}, £{p_max:.2f}]."
+        )
+
+    change_pct = round(((req.approved_price - old_price) / old_price) * 100, 1) if old_price > 0 else 0.0
+    tier = "AUTO_APPROVED" if abs(change_pct) <= 3.0 else "MANAGER_APPROVED"
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
+
+    # Update active catalog in memory and on disk
+    item["base_price"] = round(req.approved_price, 2)
+    with open(CATALOG_PATH, "w") as f:
+        json.dump(optimizer.catalog, f, indent=2)
+
+    # Append immutable audit log entry
+    file_exists = os.path.exists(AUDIT_LOG_PATH)
+    with open(AUDIT_LOG_PATH, "a", newline="") as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["timestamp", "stock_code", "description", "old_price", "new_price", "change_pct", "autonomy_tier", "approver", "reason"])
+        writer.writerow([timestamp, req.stock_code, item["description"], old_price, round(req.approved_price, 2), change_pct, tier, req.approver, req.reason])
+
+    return {
+        "status": tier,
+        "stock_code": req.stock_code,
+        "description": item["description"],
+        "old_price": old_price,
+        "new_price": round(req.approved_price, 2),
+        "change_pct": change_pct,
+        "approver": req.approver,
+        "timestamp": timestamp
+    }
+
+
+@app.get("/pricing/audit")
+def get_audit_log(limit: int = 50):
+    """Returns recent price approval decisions from models/price_audit_log.csv."""
+    if not os.path.exists(AUDIT_LOG_PATH):
+        return {"count": 0, "records": []}
+    with open(AUDIT_LOG_PATH, "r", newline="") as f:
+        rows = list(csv.DictReader(f))
+    rows.reverse()
+    return {"count": len(rows[:limit]), "records": rows[:limit]}
 
 
 if __name__ == "__main__":
